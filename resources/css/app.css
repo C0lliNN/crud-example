@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+.btn {
+    @apply .rounded .shadow .px-4 .py-2 .text-white .font-medium;
+}
+
+.btn-sm {
+    @apply .px-2 .py-1 .text-sm;
+}
+
+.btn-success {
+    @apply .bg-teal-400;
+}
+
+.btn-success:hover {
+    @apply .bg-teal-500;
+}
+
+.btn-primary {
+    @apply .bg-blue-400;
+}
+
+.btn-primary:hover {
+    @apply .bg-blue-500;
+}
+
+.btn-danger {
+    @apply .bg-red-400;
+}
+
+.btn-danger:hover {
+    @apply .bg-red-500;
+}
+
+.form-group {
+    @apply .flex .flex-col .mb-4;
+}
+
+.form-group label {
+    @apply .text-gray-600 .mb-2;
+}
+
+.form-group input,
+.form-group textarea {
+    @apply .py-2 .px-3 .rounded .shadow;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    @apply .outline-none .shadow-outline .border-teal-400;
+}
