@@ -20,7 +20,9 @@
       <tr>
         <td class="border px-3 h-12">
           <div class="flex items-center">
-            <img class="w-10 h-10 rounded-full" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}">
+            @if ($product->image)  
+              <img class="w-10 h-10 rounded-full" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}">
+            @endif
             <span class="ml-3 text-gray-600">{{ $product->name }}</span>
           </div>
         </td>

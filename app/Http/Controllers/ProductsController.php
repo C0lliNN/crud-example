@@ -34,13 +34,17 @@ class ProductsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(HandleProductsRequest $request) {
-        
+        $imageUrl = null;
+
+        if ($request->hasFile('image')) {
+            $imageUrl = $request->image->storePublicly('images');
+        }
 
         Product::create([
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
-            'image' => $request->image->storePublicly('images')
+            'image' => $imageUrl
         ]);
 
         return redirect()->route('products.index');

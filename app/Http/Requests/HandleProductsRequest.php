@@ -26,7 +26,7 @@ class HandleProductsRequest extends FormRequest {
             'name' => 'required|string',
             'description' => 'required|string',
             'price' => 'required|numeric',
-            'image' => "{$imageStatus}|image"
+            'image' => "nullable|image"
         ];
     }
 }
